@@ -6,7 +6,6 @@ GREEN='\033[1;32m'
 NEGRITO='\033[1m'
 ORANGE='\033[1;33m'
 RED='\033[1;31m'
-YELLOW='\033[0;33m'
 
 credits(){
 echo
@@ -42,19 +41,19 @@ SPF1=$(host -t TXT $DOMAIN | grep "v=spf1" | cut -d '"' -f2 | grep -oE '[^ ]+$')
 if [ "$SPF1" = "-all" ]
 then
 echo
-echo -e "${GREEN}Not Vulnerable${COLORF}"
+echo -e "${GREEN}$DOMAIN is Not Vulnerable${COLORF}"
 elif [ "$SPF1" = "~all" ]
 then
 echo
-echo -e "${YELLOW}VULNERABLE (usually sent in the Spam box)${COLORF}"
+echo -e "${ORANGE}$DOMAIN is VULNERABLE (usually sent in the Spam box)${COLORF}"
 elif [ "$SPF1" = "?all" ]
 then
 echo
-echo  -e "${ORANGE}VULNERABLE${COLORF}"
+echo  -e "${RED}$DOMAIN is VULNERABLE!!${COLORF}"
 elif [ -z "$SPF1" ]
 then
 echo
-echo -e "${RED}TOTALLY VULNERABLE${COLORF} or ${GREEN}Not Vulnerable${COLORF}"
+echo -e "$DOMAIN is ${RED}TOTALLY VULNERABLE${COLORF} or ${GREEN}Not Vulnerable${COLORF}"
 echo -e "Please, use: '${NEGRITO}host -t TXT $DOMAIN${COLORF}' to analyze correctly.."
 else
 echo
