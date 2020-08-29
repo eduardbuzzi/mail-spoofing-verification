@@ -57,7 +57,7 @@ echo -e "$DOMAIN is ${RED}TOTALLY VULNERABLE${COLORF} or ${GREEN}Not Vulnerable$
 echo -e "Please, use: '${NEGRITO}host -t TXT $DOMAIN${COLORF}' to analyze correctly.."
 else
 echo
-echo "I'm confused, I don't recognize that term."
+echo -e "${NEGRITO}I'm confused, I don't recognize that term.${COLORF}"
 fi
 }
 
