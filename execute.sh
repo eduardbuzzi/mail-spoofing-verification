@@ -11,7 +11,7 @@ credits(){
 echo
 echo -e "${NEGRITO}===============================================${COLORF}"
 echo -e "${NEGRITO}Script developed by:${COLORF} ${BLUE}Eduardo Buzzi${COLORF}"
-echo -e "${NEGRITO}More Scripts in:${COLORF} ${RED}https://github.com/eduardbuzzi${COLORF}"
+echo -e "${NEGRITO}More Scripts in:${COLORF} ${RED}https://github.com/edubuzzi${COLORF}"
 echo -e "${NEGRITO}===============================================${COLORF}"
 }
 
